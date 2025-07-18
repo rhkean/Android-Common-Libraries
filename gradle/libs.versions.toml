@@ -25,6 +25,9 @@ nordic-blek = "2.0.0-alpha04"
 nordicPlugins = "2.9"
 dokkaPlugin = "2.0.0"
 googleServicesPlugins = "4.4.3"
+datastore = "1.1.7"
+protobufJavalite = "4.31.1"
+protobuf = "0.9.5"
 
 [libraries]
 accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
@@ -61,6 +64,8 @@ leakcanary = { group = "com.squareup.leakcanary", name = "leakcanary-android", v
 nordic-log = { group = "no.nordicsemi.android", name = "log", version.ref = "nordic-log" }
 nordic-blek-client-core-android = { group = "no.nordicsemi.kotlin.ble", name = "client-core-android", version.ref = "nordic-blek" }
 nordic-blek-client-android = { group = "no.nordicsemi.kotlin.ble", name = "client-android", version.ref = "nordic-blek" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore", version.ref = "datastore" }
+protobuf-javalite = { group = "com.google.protobuf", name = "protobuf-javalite", version.ref = "protobufJavalite" }
 
 [plugins]
 nordic-application = { id = "no.nordicsemi.android.plugin.application", version.ref = "nordicPlugins" }
@@ -82,3 +87,4 @@ kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref =
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 publish = { id = "com.gradle.plugin-publish", version.ref = "publishPlugin" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugins" }
+google-protobuf = { id = "com.google.protobuf", version.ref = "protobuf" }
