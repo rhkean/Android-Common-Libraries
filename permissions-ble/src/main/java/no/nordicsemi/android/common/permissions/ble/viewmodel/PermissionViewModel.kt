@@ -39,6 +39,7 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 import no.nordicsemi.android.common.permissions.ble.BlePermissionNotAvailableReason
 import no.nordicsemi.android.common.permissions.ble.bluetooth.BluetoothStateManager
+import no.nordicsemi.android.common.permissions.ble.datastore.PermissionsBleRepository
 import no.nordicsemi.android.common.permissions.ble.location.LocationStateManager
 import no.nordicsemi.android.common.permissions.ble.util.BlePermissionState
 import javax.inject.Inject
@@ -50,6 +51,7 @@ import javax.inject.Inject
 internal class PermissionViewModel @Inject internal constructor(
     private val bluetoothManager: BluetoothStateManager,
     private val locationManager: LocationStateManager,
+    private val permissionsBleRepository: PermissionsBleRepository
 ) : ViewModel() {
     val bluetoothState = bluetoothManager.bluetoothState()
         .stateIn(

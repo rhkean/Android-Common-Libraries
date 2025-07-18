@@ -37,11 +37,21 @@ import android.content.SharedPreferences
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.content.edit
+import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
+import no.nordicsemi.android.common.permissions.ble.datastore.PermissionsBleData
+import no.nordicsemi.android.common.permissions.ble.datastore.PermissionsBleDataSerializer
 
 private const val SHARED_PREFS_NAME = "SHARED_PREFS_NAME"
 
 private const val PREFS_PERMISSION_REQUESTED = "permission_requested"
 private const val PREFS_BLUETOOTH_PERMISSION_REQUESTED = "bluetooth_permission_requested"
+private const val DATASTORE_FILENAME = "permissions_ble.pb"
+
+private val Context.permissionsBleDataStore: DataStore<PermissionsBleData> by dataStore (
+    fileName = DATASTORE_FILENAME,
+    serializer = PermissionsBleDataSerializer
+)
 
 @Suppress("unused")
 @SuppressLint("AnnotateVersionCheck")
